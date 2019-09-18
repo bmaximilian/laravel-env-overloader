@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Install system packages
-          command: apt-get update && apt-get -y install git
+          command: apt-get update && apt-get -y install git zip unzip php7.1-zip
       - run:
           name: Install Composer
           command: |
@@ -34,6 +34,9 @@ jobs:
       - image: php:7.1-cli
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Unit
           command: vendor/bin/phpunit
@@ -43,6 +46,9 @@ jobs:
       - image: php:7.2-cli
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Unit
           command: vendor/bin/phpunit
@@ -52,6 +58,9 @@ jobs:
       - image: php:7.3-cli
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Unit
           command: vendor/bin/phpunit
@@ -61,6 +70,9 @@ jobs:
       - image: php:7.4-rc-cli
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "composer.json" }}
       - run:
           name: Unit
           command: vendor/bin/phpunit
