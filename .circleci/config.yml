@@ -69,15 +69,7 @@ workflows:
   build_and_test:
     jobs:
       - install
-      - test_php-7.1:
-        requires:
-          - install
-      - test_php-7.2:
-        requires:
-          - install
-      - test_php-7.3:
-        requires:
-          - install
-      - test_php-7.4:
-        requires:
-          - install
+      - test_php-7.1
+      - test_php-7.2
+      - test_php-7.3
+      - test_php-7.4
