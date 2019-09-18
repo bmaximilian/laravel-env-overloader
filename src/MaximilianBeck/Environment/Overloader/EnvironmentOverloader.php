@@ -1,10 +1,22 @@
 <?php
+/**
+ * Created on 2019-09-18.
+ *
+ * @author Maximilian Beck <contact@maximilianbeck.de>
+ */
 
 namespace MaximilianBeck\Environment\Overloader;
 
 use Dotenv\Dotenv;
 
-class EnvironmentOverloader {
+/**
+ * Class EnvironmentOverloader
+ * @author Maximilian Beck <contact@maximilianbeck.de>
+ * @license MIT
+ * @package MaximilianBeck\Environment\Overloader
+ */
+class EnvironmentOverloader
+{
     /**
      * Overload the environment variables with an array of .env files
      * relative to the application base path.
@@ -12,7 +24,8 @@ class EnvironmentOverloader {
      *
      * @param string[] $dotEnvFiles
      */
-    static function overload(array $dotEnvFiles = ['.env.secrets',]) {
+    static function overload(array $dotEnvFiles = ['.env.secrets',])
+    {
         $appEnv = env('APP_ENV');
         $appEnvFileName = '.env.' . $appEnv;
 

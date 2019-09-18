@@ -1,11 +1,17 @@
 <?php
+/**
+ * Created on 2019-09-18.
+ *
+ * @author Maximilian Beck <contact@maximilianbeck.de>
+ */
 
 namespace MaximilianBeck\Environment\Overloader\Console\Commands;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Console\Command;
 
-class EnvironmentSetup extends Command {
+class EnvironmentSetup extends Command
+{
     /**
      * The name and signature of the console command.
      *
@@ -31,7 +37,8 @@ class EnvironmentSetup extends Command {
      * Create a new command instance.
      * @param Application $app
      */
-    public function __construct(Application $app) {
+    public function __construct(Application $app)
+    {
         parent::__construct();
         $this->output = new \Symfony\Component\Console\Output\ConsoleOutput();
         $this->app = $app;
@@ -42,7 +49,8 @@ class EnvironmentSetup extends Command {
      *
      * @return mixed
      */
-    public function handle() {
+    public function handle()
+    {
         // Read out the current app env file to reset it later
         $envFile = $this->app->environmentFile();
 
