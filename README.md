@@ -5,6 +5,11 @@ Environment overloading can be useful when dealing with local environment variab
 or when dealing with secrets that should not be committed to your repository.
 
 ## Installation
+### Install with composer
+```bash
+composer require bmaximilian/laravel-env-overloader
+```
+
 ### Overload the environment with multiple env files
 Paste the following code in your `bootstrap/app.php`
 ```php
