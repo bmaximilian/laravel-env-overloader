@@ -1,4 +1,11 @@
 # laravel-env-overloader
+
+<p align="center">
+<a href="https://circleci.com/gh/bmaximilian/laravel-env-overloader"><img src="https://circleci.com/gh/bmaximilian/laravel-env-overloader.svg?style=svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/bmaximilian/laravel-env-overloader"><img src="https://poser.pugx.org/bmaximilian/laravel-env-overloader/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/bmaximilian/laravel-env-overloader"><img src="https://poser.pugx.org/bmaximilian/laravel-env-overloader/license.svg" alt="License"></a>
+</p>
+
 A Dotenv extension to use multiple environment config files.
 
 Environment overloading can be useful when dealing with local environment variables (such as APP_KEY)
