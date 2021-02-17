@@ -1,4 +1,9 @@
 <?php
+/**
+ * Created on 2019-09-18.
+ *
+ * @author Maximilian Beck <contact@maximilianbeck.de>
+ */
 
 namespace MaximilianBeck\Environment\Overloader\Console\Providers;
 
@@ -10,11 +15,13 @@ use MaximilianBeck\Environment\Overloader\Console\Commands\EnvironmentSetup;
  *
  * @package MaximilianBeck\Environment\Overloader\Console\Providers
  */
-class EnvironmentOverloaderConsoleServiceProvider extends ServiceProvider {
+class EnvironmentOverloaderConsoleServiceProvider extends ServiceProvider
+{
     /**
      * @return void
      */
-    public function register() {
+    public function register()
+    {
         $this->commands([
             EnvironmentSetup::class,
         ]);
